@@ -119,6 +119,7 @@ body {
   text-align: right;
   font-weight: var(--fw-bold);
   color: var(--primary-bright-blue);
+  display: inline-block;
 }
 .order-change:hover {
   text-decoration: none;
@@ -137,6 +138,7 @@ body {
   box-shadow: 0 15px 40px hsl(245, 61%, 85%);
   margin: 1.5rem 0;
   transition: opacity .3s ease;
+  cursor: pointer;
 }
 .button:hover {
   opacity: 0.8;
