@@ -1,0 +1,178 @@
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --neutral-very-pale-blue: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue: hsl(224, 23%, 55%);
+  --neutral-dark-blue: hsl(223, 47%, 23%);
+  --font-red-hat-display: 'Red Hat Display', sans-serif;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: var(--font-red-hat-display);
+  margin: 1rem;
+  display: grid;
+  place-content: center;
+  background: url('/images/pattern-background-mobile.svg') no-repeat center;
+  background-color: var(--primary-pale-blue);
+}
+
+.card {
+  background-color: white;
+  display: grid;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 15px 15px hsl(245, 46%, 89%);
+}
+.card-body {
+  padding: 2rem 1.5rem;
+}
+
+.order-title {
+  text-align: center;
+  font-weight: var(--fw-black);
+  color: var(--neutral-dark-blue);
+}
+.order-description {
+  text-align: center;
+  font-weight: var(--fw-medium);
+  color: var(--neutral-desaturated-blue);
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+.order-price-wrapper {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: var(--neutral-very-pale-blue);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+.order-plan {
+  color: var(--neutral-dark-blue);
+  font-size: 1rem;
+  font-weight: var(--fw-black);
+}
+.order-price {
+  font-weight: var(--fw-medium);
+  color: var(--neutral-desaturated-blue);
+}
+.order-change {
+  text-align: right;
+  font-weight: var(--fw-bold);
+  color: var(--primary-bright-blue);
+}
+.order-change:hover {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  opacity: 0.8;
+}
+.button {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--primary-bright-blue);
+  border-radius: 0.7rem;
+  border: none;
+  color: white;
+  font-weight: var(--fw-bold);
+  box-shadow: 0 15px 40px hsl(245, 61%, 85%);
+  margin: 1.5rem 0;
+  transition: opacity .3s ease;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.cancel-order {
+  text-align: center;
+  font-weight: var(--fw-black);
+  color: var(--neutral-desaturated-blue);
+  text-decoration: none;
+  display: block;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+.cancel-order:hover {
+  color: var(--neutral-dark-blue);
+}
+@media (min-width: 600px) {
+  body {
+    background: url('/images/pattern-background-desktop.svg') no-repeat top center;
+    background-color: var(--primary-pale-blue);
+  }
+  .card {
+    width: 25rem;
+    border-radius: 1rem;
+  }
+  .card-body {
+    padding: 2.5rem 2.5rem;
+  }
+  .order-description {
+    padding: 0 0.5rem;
+  }
+  .button {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  .cancel-order {
+    font-size: 0.9rem;
+  }
+}
