@@ -30,8 +30,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/order-summary-component-6YTvf7mCCB)
+- Live Site URL: [Live Site](https://order-summary-card-frontendmentor.vercel.app/)
+- Github Repository URL: [Github](https://github.com/juliansyahrifqi/order-summary-card-frontendmentor)
 
 ## My process
 
